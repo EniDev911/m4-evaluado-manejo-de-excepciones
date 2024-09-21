@@ -15,6 +15,12 @@ class Foto:
 
     @ancho.setter
     def ancho(self, ancho) -> None:
+        if ancho < 1 or ancho self.MAX:
+            raise DimensionError(
+                f"No puede ingresar un valor menor a 1 o mayor a {self.MAX}",
+                ancho,
+                self.MAX
+            )
         self.__ancho = ancho
 
     @property
